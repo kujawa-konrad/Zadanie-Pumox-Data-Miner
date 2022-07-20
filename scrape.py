@@ -1,17 +1,16 @@
+# This script should be open in terminal, as in the example below:
+# $ python scrape.py https://www.website-address.com
+
 import sys
 import logging
 import os
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-
 from webdriver_manager.chrome import ChromeDriverManager
-
 import re
 
 options = Options()
