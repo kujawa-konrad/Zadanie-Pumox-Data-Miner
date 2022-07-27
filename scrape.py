@@ -78,23 +78,23 @@ while True:
 
 print(checking.strip())
 
-df = pd.DataFrame({
-    'Website' : [adres],
-    'Phone number' : [checking]
-    }, columns=['Website', 'Phone number'])
+# df = pd.DataFrame({
+#     'Website' : [adres],
+#     'Phone number' : [checking]
+#     }, columns=['Website', 'Phone number'])
 
-try:
-    with pd.ExcelWriter(
-        "phones-database.xlsx",
-        mode="a",
-        engine="openpyxl",
-        if_sheet_exists="overlay",
-    ) as writer:
-        df.to_excel(writer, 
-        sheet_name='Sheet1', 
-        startrow=writer.sheets['Sheet1'].max_row, 
-        header=None)  
-except:
-    df.to_excel("phones-database.xlsx", sheet_name='Sheet1')
+# try:
+#     with pd.ExcelWriter(
+#         "phones-database.xlsx",
+#         mode="a",
+#         engine="openpyxl",
+#         if_sheet_exists="overlay",
+#     ) as writer:
+#         df.to_excel(writer, 
+#         sheet_name='Sheet1', 
+#         startrow=writer.sheets['Sheet1'].max_row, 
+#         header=None)  
+# except:
+#     df.to_excel("phones-database.xlsx", sheet_name='Sheet1')
 
 driver.quit()
