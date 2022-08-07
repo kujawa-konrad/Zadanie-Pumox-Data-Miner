@@ -1,6 +1,8 @@
 # This script should be open in terminal, as in the example below:
 # $ python scrape.py https://www.website-address.com
 
+# I focused mostly on polish and german phone number formats.
+
 import sys
 import logging
 import os
@@ -12,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 import re
-import pandas as pd
+# import pandas as pd
 
 options = Options()
 options.add_argument('headless')
